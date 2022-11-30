@@ -15,9 +15,11 @@ public class ProdutoServiceImpl implements IProdutoService{
 
     @Override
     public ArrayList<Produto> recuperarTodos() {
-        return (ArrayList<Produto>) dao.findAll();
+//        return (ArrayList<Produto>) dao.findAll();
+//        return dao.findByOrderByPreco();
+//        return dao.findByOrderByPrecoDesc();
+        return dao.findByNameContaining("Console");
     }
-
     @Override
     public Produto recuperarPeloCodigo(Integer codigo) {
 
@@ -28,5 +30,10 @@ public class ProdutoServiceImpl implements IProdutoService{
     public Produto cadastrarNovo(Produto novo) {
 
         return dao.save(novo);
+    }
+
+    @Override
+    public ArrayList<Produto> buscarPorPalavraChave(String palavra) {
+        return dao.findByNameContaining(palavra);
     }
 }
