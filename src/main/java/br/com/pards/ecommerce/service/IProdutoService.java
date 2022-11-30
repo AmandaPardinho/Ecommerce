@@ -1,2 +1,4 @@
-package br.com.pards.ecommerce.service;public interface IProdutoService {
+package br.com.pards.ecommerce.service;
+
+public interface IProdutoService {
 }
