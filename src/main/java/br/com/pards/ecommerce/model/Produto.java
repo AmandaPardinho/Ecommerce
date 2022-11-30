@@ -1,5 +1,7 @@
 package br.com.pards.ecommerce.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 @Entity
@@ -22,6 +24,7 @@ public class Produto {
 
     @ManyToOne
     @JoinColumn(name = "numero_departamento")
+    @JsonIgnoreProperties("listaProdutos")
     private Departamento departamento;
 
     public Integer getCodigo() {
