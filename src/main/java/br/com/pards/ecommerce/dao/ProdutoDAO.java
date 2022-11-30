@@ -8,4 +8,8 @@ import java.util.ArrayList;
 public interface ProdutoDAO extends CrudRepository<Produto, Integer>{
 
     public ArrayList<Produto> findByOrderByPreco();
+    public ArrayList<Produto> findByOrderByPrecoDesc();
+    public ArrayList<Produto> findByNameContaining(String palavraChave);
+
+
 }
