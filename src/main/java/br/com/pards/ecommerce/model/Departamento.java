@@ -1,8 +1,10 @@
 package br.com.pards.ecommerce.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import javax.persistence.*;
+import java.util.List;
 
 
 @Entity  //indica que a classe eh armazenavel no banco
@@ -17,6 +19,10 @@ public class Departamento {
     private String nome;
     @Column(name = "descricao", columnDefinition = "TEXT")
     private String descricao;
+
+    @OneToMany(mappedBy = "departamento", cascade = CascadeType.ALL)
+    @JsonIgnoreProperties("departamento")
+    private List<Produto> listaProdutos;
 
 
     public Integer getNumero() {
@@ -43,9 +49,17 @@ public class Departamento {
         return descricao;
     }
 
-    public void setDescrição(String descricao) {
+    public void setDescricao(String descricao) {
 
         this.descricao = descricao;
+    }
+
+    public List<Produto> getListaProdutos() {
+        return listaProdutos;
+    }
+
+    public void setListaProdutos(List<Produto> listaProdutos) {
+        this.listaProdutos = listaProdutos;
     }
 }
 
