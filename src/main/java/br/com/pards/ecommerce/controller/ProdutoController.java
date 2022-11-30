@@ -30,6 +30,12 @@ public class ProdutoController {
         return ResponseEntity.status(404).build();
     }
 
+    //recuperar por palavra-chave
+    @GetMapping("/produtos/busca")
+    public ArrayList<Produto> recuperarPorPalavraChave(@RequestParam (name = "palavra") String palavra){
+        return service.buscarPorPalavraChave(palavra);
+    }
+
     //cadastrar
     @PostMapping("/produtos")
     public ResponseEntity<Produto> inserirNovoProduto(@RequestBody Produto novo){
