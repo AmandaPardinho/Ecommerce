@@ -1,6 +1,6 @@
 package br.com.pards.ecommerce.controller;
 
-import br.com.pards.ecommerce.dao.DepartamentoDAO;
+
 import br.com.pards.ecommerce.model.Departamento;
 import br.com.pards.ecommerce.service.IDepartamentoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +30,7 @@ public class DepartamentoController {
     }
 
     @PutMapping("/departamentos")
-    public ResponseEntity<Departamento> alterar(@RequestBody Departamento dados){
+    public ResponseEntity<Departamento> alterarDados(@RequestBody Departamento dados){
         Departamento res = service.atualizarDados(dados);
         if(res != null){
             return ResponseEntity.badRequest().build();
