@@ -1,13 +1,12 @@
 package br.com.pards.ecommerce.service;
 
+
 import br.com.pards.ecommerce.dao.PedidoDAO;
-import br.com.pards.ecommerce.dto.FaturamentoMensal;
 import br.com.pards.ecommerce.model.ItemPedido;
 import br.com.pards.ecommerce.model.Pedido;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 
 @Service
 public class PedidoServiceImpl implements IPedidoService{
@@ -29,8 +28,8 @@ public class PedidoServiceImpl implements IPedidoService{
         return dao.findById(numero).orElse(null);
     }
 
-    @Override
+    /* @Override
     public ArrayList<FaturamentoMensal> recuperarFaturamento(Integer ano) {
         return dao.recuperarFaturamentoPorAno(ano);
-    }
+    }*/
 }
