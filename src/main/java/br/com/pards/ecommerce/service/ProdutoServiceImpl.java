@@ -1,6 +1,5 @@
 package br.com.pards.ecommerce.service;
 
-
 import br.com.pards.ecommerce.dao.ProdutoDAO;
 import br.com.pards.ecommerce.model.Produto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,13 +22,11 @@ public class ProdutoServiceImpl implements IProdutoService{
      }
     @Override
     public Produto recuperarPeloCodigo(Integer codigo) {
-
         return dao.findById(codigo).orElse(null);
     }
 
     @Override
     public Produto cadastrarNovo(Produto novo) {
-
         return dao.save(novo);
     }
 

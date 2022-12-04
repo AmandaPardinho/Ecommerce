@@ -1,6 +1,5 @@
 package br.com.pards.ecommerce.controller;
 
-
 import br.com.pards.ecommerce.model.Departamento;
 import br.com.pards.ecommerce.service.IDepartamentoService;
 import org.springframework.beans.factory.annotation.Autowired;

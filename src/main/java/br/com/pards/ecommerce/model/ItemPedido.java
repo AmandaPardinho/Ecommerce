@@ -1,6 +1,5 @@
 package br.com.pards.ecommerce.model;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 

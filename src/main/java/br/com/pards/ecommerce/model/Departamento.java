@@ -21,7 +21,6 @@ public class Departamento {
     @JsonIgnoreProperties("departamento")
     private List<Produto> listaProdutos;
 
-
     public Integer getNumero() {
         return numero;
     }

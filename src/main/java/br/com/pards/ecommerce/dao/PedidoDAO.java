@@ -1,6 +1,5 @@
 package br.com.pards.ecommerce.dao;
 
-
 import br.com.pards.ecommerce.dto.FaturamentoMensal;
 import br.com.pards.ecommerce.model.Pedido;
 import org.springframework.data.jpa.repository.Query;
@@ -18,5 +17,4 @@ public interface PedidoDAO extends CrudRepository<Pedido, Integer> {
             + "GROUP BY month(p.data) "
             + "ORDER BY month(p.data) ")
     public ArrayList<FaturamentoMensal> recuperarFaturamentoPorAno(@Param("ano") Integer ano);*/
-
 }

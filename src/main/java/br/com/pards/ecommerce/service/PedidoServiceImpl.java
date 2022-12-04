@@ -1,12 +1,10 @@
 package br.com.pards.ecommerce.service;
 
-
 import br.com.pards.ecommerce.dao.PedidoDAO;
 import br.com.pards.ecommerce.model.ItemPedido;
 import br.com.pards.ecommerce.model.Pedido;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 
 @Service
 public class PedidoServiceImpl implements IPedidoService{

@@ -1,6 +1,5 @@
 package br.com.pards.ecommerce.controller;
 
-
 import br.com.pards.ecommerce.model.Produto;
 import br.com.pards.ecommerce.service.IProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,5 +45,4 @@ public class ProdutoController {
         }
         return ResponseEntity.badRequest().build();
     }
-
 }
