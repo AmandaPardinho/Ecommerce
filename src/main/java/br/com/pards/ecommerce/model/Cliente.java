@@ -1,6 +1,6 @@
 package br.com.pards.ecommerce.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "cliente")
