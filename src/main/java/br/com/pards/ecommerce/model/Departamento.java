@@ -1,14 +1,11 @@
 package br.com.pards.ecommerce.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import jakarta.persistence.*;
 
-import javax.persistence.*;
 import java.util.List;
 
-
 @Entity  //indica que a classe eh armazenavel no banco
-@EntityScan(basePackages = {"br.com.pards.ecommerce.model.Departamento"})
 @Table(name = "departamento")  //torna explicito o nome da tabela a qual corresponde esta classe
 public class Departamento {
     @Column(name = "numero")  //torna explicito o nome da coluna a qual corresponde esse atributo
@@ -30,27 +27,22 @@ public class Departamento {
     }
 
     public void setNumero(Integer numero) {
-
         this.numero = numero;
     }
 
     public String getNome() {
-
         return nome;
     }
 
     public void setNome(String nome) {
-
         this.nome = nome;
     }
 
     public String getDescricao() {
-
         return descricao;
     }
 
     public void setDescricao(String descricao) {
-
         this.descricao = descricao;
     }
 
