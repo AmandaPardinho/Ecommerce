@@ -1,5 +1,6 @@
 package br.com.pards.ecommerce.controller;
 
+
 import br.com.pards.ecommerce.dto.FaturamentoMensal;
 import br.com.pards.ecommerce.model.Pedido;
 import br.com.pards.ecommerce.service.IPedidoService;
@@ -29,9 +30,9 @@ public class PedidoController {
         return ResponseEntity.ok(service.inserirNovoPedido(novo));
     }
 
-    @GetMapping("/faturamento/{ano}")
+    /*@GetMapping("/faturamento/{ano}")
     public ArrayList<FaturamentoMensal> recuperarFaturamento(@PathVariable Integer ano){
         return service.recuperarFaturamento(ano);
-    }
+    }*/
 
 }
