@@ -1,5 +1,6 @@
 package br.com.pards.ecommerce.controller;
 
+
 import br.com.pards.ecommerce.model.Produto;
 import br.com.pards.ecommerce.service.IProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +33,7 @@ public class ProdutoController {
 
     //recuperar por palavra-chave
     @GetMapping("/produtos/busca")
-    public ArrayList<Produto> recuperarPorPalavraChave(@RequestParam (name = "palavra") String palavra){
+    public ArrayList<Produto> recuperarPorPalavraChave(@RequestParam(name = "palavra") String palavra){
         return service.buscarPorPalavraChave(palavra);
     }
 
