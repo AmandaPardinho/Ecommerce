@@ -3,9 +3,7 @@ package br.com.pards.ecommerce.service;
 import br.com.pards.ecommerce.dao.DepartamentoDAO;
 import br.com.pards.ecommerce.model.Departamento;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -40,8 +38,8 @@ public class DepartamentoServiceImpl implements IDepartamentoService{
         return dao.findById(id).orElse(null);
     }
 
-    @Override
-    public void excluirDepartamento(Integer id) {
+   @Override
+   public void excluirDepartamento(Integer id) {
         dao.deleteById(id);
-    }
+   }
 }
